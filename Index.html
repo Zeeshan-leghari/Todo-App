@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      border: none;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      background-color: #6CD0ff;
+
+    }
+
+
+    .container {
+      background-color: rgb(16, 139, 139);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      /* min-height: 200px; */
+      max-height: max-content;
+      text-align: center;
+      gap: 20px;
+      color: white;
+      margin-top: 30px;
+    }
+
+    #todotext {
+      margin-top: 10px;
+    }
+
+    i {
+      background: white;
+      font-size: 36px
+    }
+
+    i:hover {
+      color: red;
+    }
+
+    #inputbox {
+      padding: 10px 30px;
+      background-color: white;
+      color: black;
+      outline: none;
+      border-radius: 20px;
+      margin-bottom: 10px;
+
+    }
+
+    .btn {
+      padding: 8px 15px;
+      background-color: white;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: rgba(74, 236, 74, 0.796);
+      color: white;
+      transition-duration: 0.3s;
+    }
+
+    ul {
+      list-style: none;
+      padding-bottom: 50px;
+
+    }
+
+
+
+
+
+    ul li {
+      padding: 10px;
+      background-color: white;
+      color: black;
+      outline: none;
+      border-radius: 20px;
+      text-align: start;
+      width: 280px;
+      margin-top: 10px;
+      margin-left: 7px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+
+
+    li :nth-child(1) {
+      margin-left: 50px;
+    }
+
+
+
+    ul li .remove-btn {
+      padding: 5px;
+      background-color: rgb(107, 108, 107);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    ul li .remove-btn:hover {
+      background-color: rgb(255, 3, 3);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h2 id="todotext">Todo App</h2>
+    <div class="box">
+      <input type="text" placeholder="Write Here" id="inputbox" autofocus onchange="TODOTASKADD()">
+      <button class="btn" onclick="TODOTASKADD()">Add</button>
+      <ul id="taskadd">
+
+      </ul>
+    </div>
+
+  </div>
+
+
+
+
+
+</body>
+<script src="js.js"></script>
+
+</html>
